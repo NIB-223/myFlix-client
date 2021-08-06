@@ -8,17 +8,14 @@
     "js-tokens": "^4.0.0",
     "loose-envify": "^1.4.0",
     "object-assign": "^4.1.1",
+    "parcel-bundler": "^1.12.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "scheduler": "^0.20.2"
   },
-  "devDependencies": {
-    "parcel": "^2.0.0-rc.0",
-    "sass": "^1.37.3"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "src/index.html"
+    "dev": "parcel src/index.html"
   },
   "repository": {
     "type": "git",
@@ -29,5 +26,9 @@
   "bugs": {
     "url": "https://github.com/Drxl95/myFlix-client/issues"
   },
-  "homepage": "https://github.com/Drxl95/myFlix-client#readme"
+  "homepage": "https://github.com/Drxl95/myFlix-client#readme",
+  "devDependencies": {
+    "parcel": "^2.0.0-rc.0",
+    "sass": "^1.37.5"
+  }
 }
