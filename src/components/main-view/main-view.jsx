@@ -26,26 +26,17 @@ export class MainView extends React.Component {
           console.log(error);
         });
     }
+
     setSelectedMovie(newSelectedMovie) {
         this.setState({
             selectedMovie: newSelectedMovie
         });
     }
 
-    render() {
-        return (
-          <div className="main-view">
-            <div>Inception</div>
-            <div>The Shawshank Redemption</div>
-            <div>Gladiator</div>
-          </div>
-        );
-      }
-
       render() {
         const { movies, selectedMovie } = this.state;
     
-        if (movies.length === 0) return <div className="main-view" />;
+        if (movies.length === 0) return <div className="main-view" />; //if there are no movies, display nothing.
     
         return (
           <div className="main-view">
