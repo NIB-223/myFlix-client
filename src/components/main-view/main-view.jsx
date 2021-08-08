@@ -26,6 +26,7 @@ export class MainView extends React.Component {
           console.log(error);
         });
     }
+  
 
     setSelectedMovie(newSelectedMovie) {
         this.setState({
@@ -33,22 +34,22 @@ export class MainView extends React.Component {
         });
     }
 
-      render() {
-        const { movies, selectedMovie } = this.state;
-    
-        if (movies.length === 0) return <div className="main-view" />; //if there are no movies, display nothing.
-    
-        return (
-          <div className="main-view">
-            {selectedMovie
-              ? <MovieView movie={selectedMovie} onBackClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }}/>
-              : movies.map(movie => (
-                <MovieCard key={movie._id} movie={movie} onMovieClick={(newSelectedMovie) => { this.setSelectedMovie(newSelectedMovie) }}/>
-             ))
-            }
-          </div>
-        );
-      }
+    render() {
+      const { movies, selectedMovie } = this.state;
+  
+      if (movies.length === 0) return <div className="main-view" />;
+  
+      return (
+        <div className="main-view">
+          {selectedMovie
+            ? <MovieView movie={selectedMovie} onBackClick={newSelectedMovie => { this.setSelectedMovie(newSelectedMovie); }}/>
+            : movies.map(movie => (
+              <MovieCard key={movie._id} movie={movie} onMovieClick={(newSelectedMovie) => { this.setSelectedMovie(newSelectedMovie) }}/>
+           ))
+          }
+        </div>
+      );
     }
+  }
 
     export default MainView;

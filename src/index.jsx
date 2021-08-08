@@ -9,6 +9,39 @@ import './index.scss';
 
 // Main component (will eventually use all the others)
 class MyFlixApplication extends React.Component {
+
+  constructor() {
+    super();
+    this.state = {
+      movies: [],
+      selectedMovie: null
+    }
+  }  
+
+  render() {
+    return <div>Hello World</div>;
+  }
+
+  componentDidMount(){
+    axios.get('https://myflixdb20.herokuapp.com/movies')
+      .then(response => {
+        this.setState({
+          movies: response.data
+        });
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
+  componentDidUpdate(){
+    // code executed right after component's state or props are changed.
+  }
+
+  componentWillUnmount(){
+    // code executed just before the moment the component gets removed from the DOM.
+  }
+
+
   render() {
     return (
       <MainView />
