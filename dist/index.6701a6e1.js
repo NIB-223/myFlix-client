@@ -951,43 +951,11 @@ var _mainViewDefault = parcelHelpers.interopDefault(_mainView);
 var _indexScss = require("./index.scss");
 // Main component (will eventually use all the others)
 class MyFlixApplication extends _reactDefault.default.Component {
-    constructor(){
-        super();
-        this.state = {
-            movies: [],
-            selectedMovie: null
-        };
-    }
-    render() {
-        return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
-            __source: {
-                fileName: "src/index.jsx",
-                lineNumber: 22
-            },
-            __self: this,
-            children: "Hello World"
-        }));
-    }
-    componentDidMount() {
-        axios.get('https://myflixdb20.herokuapp.com/movies').then((response)=>{
-            this.setState({
-                movies: response.data
-            });
-        }).catch((error)=>{
-            console.log(error);
-        });
-    }
-    componentDidUpdate() {
-    // code executed right after component's state or props are changed.
-    }
-    componentWillUnmount() {
-    // code executed just before the moment the component gets removed from the DOM.
-    }
     render() {
         return(/*#__PURE__*/ _jsxRuntime.jsx(_mainViewDefault.default, {
             __source: {
                 fileName: "src/index.jsx",
-                lineNumber: 47
+                lineNumber: 17
             },
             __self: this
         }));
