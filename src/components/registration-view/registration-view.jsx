@@ -6,7 +6,7 @@ export function RegistrationView(props) {
     const [ password, setPassword ] = useState('');
     const [ email, setEmail ] = useState('');
     const [ birthDate, setBirthDate ] = useState('');
-}
+
 
 const handleSubmit = () => {
     e.preventDefault();
@@ -32,12 +32,12 @@ const handleSubmit = () => {
       </label>
       <label>
         Date of Birth:
-        <input type="date" value={birthdate} onChange={e => setBirthdate(e.target.value)} />
+        <input type="date" value={birthdate} onChange={e => setBirthDate(e.target.value)} />
       </label>
       <button type="submit" onClick={handleSubmit}>Register</button>
     </form>
   );
-
+}
 RegistrationView.propTypes = {
   SignUp: PropTypes.func.isRequired
 };
