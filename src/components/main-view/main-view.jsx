@@ -4,6 +4,7 @@ import axios from 'axios';
 import { LoginView } from '../login-view/login-view';
 import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
+import { RegistrationView } from '../registration-view/registration-view';
 
 export class MainView extends React.Component {
 
@@ -17,10 +18,17 @@ export class MainView extends React.Component {
     };
   }
 
-  componentDidMount() {
-    /* ... */
+  componentDidMount(){
+    axios.get('https://myflixdb20.herokuapp.com/movies')  
+      .then(response => {
+        this.setState({
+          movies: response.data
+        });
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
-
 /*When a movie is clicked, this function is invoked and updates the state of the `selectedMovie` *property to that movie*/
 
   setSelectedMovie(movie) {
@@ -39,7 +47,7 @@ export class MainView extends React.Component {
 
 
   render() {
-    const { movies, selectedMovie } = this.state;
+    const { movies, selectedMovie, user } = this.state;
 
     /* If there is no user, the LoginView is rendered. If there is a user logged in, the user details are *passed as a prop to the LoginView*/
     if (!user) return <LoginView onLoggedIn={user => this.onLoggedIn(user)} />;
