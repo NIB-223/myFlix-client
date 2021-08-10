@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+
+
 
 export function RegistrationView(props) {
     const [ username, setUsername ] = useState('');
@@ -16,26 +20,37 @@ const handleSubmit = () => {
     props.SignUp(username); //this is a prop
   };
 
+
   return (
-    <form>
-      <label>
-        Username:
-        <input type="text" value={username} onChange={e => setUsername(e.target.value)} />
-      </label>
-      <label>
-        Password:
-        <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
-      </label>
-      <label>
-        Email:
-        <input type="email" value={email} onChange={e => setEmail(e.target.value)} />
-      </label>
-      <label>
-        Date of Birth:
-        <input type="date" value={birthDate} onChange={e => setBirthDate(e.target.value)} />
-      </label>
-      <button type="submit" onClick={handleSubmit}>Register</button>
-    </form>
+<>
+<h1>Register</h1>
+<Form>
+<Form.Group className="mb-3 pt-5" controlId="formUsername">
+  <Form.Label>Username:</Form.Label>
+  <Form.Control  size="lg" type="text" value={username} onChange={e => setUsername(e.target.value)} />
+</Form.Group>
+
+<Form.Group className="mb-3" controlId="formPassword">
+  <Form.Label>Password:</Form.Label>
+  <Form.Control  size="lg" type="password" value={password} onChange={e => setPassword(e.target.value)} />
+</Form.Group>
+
+<Form.Group className="mb-3" controlId="formPassword">
+  <Form.Label>Email:</Form.Label>
+  <Form.Control size="lg"  type="email" value={email} onChange={e => setEmail(e.target.value)} />
+</Form.Group>
+
+<Form.Group className="mb-3" controlId="formPassword">
+  <Form.Label>Date of Birth:</Form.Label>
+  <Form.Control  size="lg" type="date" value={birthDate} onChange={e => setBirthDate(e.target.value)} />
+</Form.Group>
+
+<Button variant="primary" btn- type="submit" onClick={handleSubmit}>
+  Register
+</Button>
+
+</Form>
+</>
   );
 
 }
