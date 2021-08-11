@@ -3,7 +3,9 @@ import PropTypes from "prop-types";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
+import logo from '../../../img/logo.jpg';
 
+import './registration-view.scss'
 
 export function RegistrationView(props) {
     const [ username, setUsername ] = useState('');
@@ -23,6 +25,11 @@ const handleSubmit = () => {
 
   return (
 <>
+<body>
+<div className="logo-container">
+  <img className="logo" src={logo}></img>
+</div>
+
 <h1>Register</h1>
 <Form>
 <Form.Group className="mb-3 pt-5" controlId="formUsername">
@@ -50,6 +57,7 @@ const handleSubmit = () => {
 </Button>
 
 </Form>
+</body>
 </>
   );
 

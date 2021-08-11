@@ -8,6 +8,9 @@ import { RegistrationView } from '../registration-view/registration-view';
 import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 
+import './main-view.scss';
+import logo from '../../../img/logo.jpg';
+
 
 export class MainView extends React.Component {
 
@@ -66,6 +69,11 @@ export class MainView extends React.Component {
     if (movies.length === 0) return <div className="main-view" />;
 
     return (
+<html>
+      <body className="background">
+           <div className="logo-container">
+  <img className="logo" src={logo}></img>
+</div>
       <Row className="justify-content-md-center">
         {selectedMovie
           ? (
@@ -80,7 +88,9 @@ export class MainView extends React.Component {
                 </Col>
               ))
         }
-        </Row>
+        </Row> 
+        </body>
+        </html>
     );
   }
 }

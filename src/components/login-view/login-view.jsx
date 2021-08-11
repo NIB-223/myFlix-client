@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
+import logo from '../../../img/logo.jpg';
+
+import './login-view.scss'
+
 
 
 export function LoginView(props) { 
@@ -18,6 +22,11 @@ export function LoginView(props) {
   };
 
   return (
+    <>
+    <div className="logo-container">
+  <img className="logo" src={logo}></img>
+</div>
+    <h1 className="login-title" >Login</h1>
     <Form>
     <Form.Group className="mb-3 pt-5"  controlId="formUsername">
       <Form.Label>Username:</Form.Label>
@@ -32,6 +41,7 @@ export function LoginView(props) {
       Submit
     </Button>
   </Form>
+  </>
   );
 }
 
