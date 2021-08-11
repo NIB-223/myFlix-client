@@ -67,7 +67,7 @@ MovieView.propTypes = {
     ImagePath: PropTypes.string.isRequired,
     Title: PropTypes.string.isRequired,
     Description: PropTypes.string.isRequired,
-    Actors: PropTypes.array,
+    Actors: PropTypes.array.isRequired,
     Genre: PropTypes.shape({
       Name: PropTypes.string.isRequired,
       Description: PropTypes.string,
