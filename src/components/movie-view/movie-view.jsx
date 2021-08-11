@@ -53,7 +53,7 @@ export class MovieView extends React.Component {
   <Card.Text>{movie.Description}</Card.Text>
   <Card.Text>Genre:  {movie.Genre.Name}</Card.Text>
   <Card.Text>Directed by: {movie.Director.Name}</Card.Text>
-  {/* <Card.Text>Starring: {movie.Actors[]}</Card.Text> */}
+  <Card.Text>Starring: {movie.Actors}</Card.Text>
   <Button onClick={() => onBackClick(null)} variant="primary">Back</Button>
 </Card.Body>
 </Card>
@@ -67,9 +67,7 @@ MovieView.propTypes = {
     ImagePath: PropTypes.string.isRequired,
     Title: PropTypes.string.isRequired,
     Description: PropTypes.string.isRequired,
-    // Actors: PropTypes.shape({
-    //   Name: PropTypes.string,
-    // }),
+    Actors: PropTypes.array,
     Genre: PropTypes.shape({
       Name: PropTypes.string.isRequired,
       Description: PropTypes.string,
