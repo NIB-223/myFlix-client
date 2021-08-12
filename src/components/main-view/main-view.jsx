@@ -11,7 +11,8 @@ import { MovieCard } from '../movie-card/movie-card';
 import { MovieView } from '../movie-view/movie-view';
 import { DirectorView } from '../director-view/director-view';
 import { GenreView } from '../genre-view/genre-view';
-import { RegistrationView } from '../registration-view/registration-view';
+import { ProfileView } from '../profile-view/profile-view';
+// import { NavBar } from '../navbar-view/navbar-view';
 
 
 import './main-view.scss';
@@ -155,6 +156,31 @@ render() {
             </Col>
           }
           } />
+
+<Route path="/users/:Username" render={({ history }) => {
+            if (!user) return <Col>
+              <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
+            </Col>
+            if (movies.length === 0) return <div className="main-view" />;
+            return <Col md={8}>
+            </Col>
+             return (
+              <>
+                <Row className="m-3 navigation-main">
+                  <Col>
+                    <NavBar user={user} />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <ProfileView user={user} movies={movies} onBackClick={() => history.goBack()} />
+                  </Col>
+                </Row>
+              </>
+            )
+          }
+          } />
+
 
       </Row>
     </Router>
