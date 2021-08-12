@@ -13,6 +13,7 @@ export function LoginView(props) {
   const [ username, setUsername ] = useState('');
   const [ password, setPassword ] = useState('');
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
     /* Send a request to the server for authentication */
@@ -25,16 +26,14 @@ export function LoginView(props) {
       props.onLoggedIn(data);
     })
     .catch(e => {
-      console.log('no such user')
+      alert('Incorrect username or password.')
     });
   };
 
 
   return (
     <>
-    <div className="logo-container">
-  <img className="logo" src={logo}></img>
-</div>
+   
     <h1 className="login-title" >Login</h1>
     <Form>
     <Form.Group className="mb-3 pt-5"  controlId="formUsername">

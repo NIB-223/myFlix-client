@@ -1,0 +1,56 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add react-router-dom
+
+PATH: 
+  C:\Program Files\MongoDB\Tools\100\bin;C:\Python39\Scripts\;C:\Python39\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\ProgramData\chocolatey\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\nvm;C:\Program Files\nodejs;C:\Program Files\Mullvad VPN\resources;C:\Program Files\dotnet\;C:\Program Files\heroku\bin;C:\Program Files\MongoDB\Tools\100\bin;C:\Users\Rob\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files (x86)\Filestar;C:\Users\Rob\AppData\Roaming\Filestar\aliases;C:\Users\Rob\AppData\Roaming\npm\node_modules\parcel-bundler\bin;C:\Program Files (x86)\Yarn\bin\;C:\Users\Rob\Desktop\Coding\MongoDB\;C:\Users\Rob\Desktop\Coding\MongoDB\Mongosh\bin;C:\Users\Rob\AppData\Roaming\npm\
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  16.4.2
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'C:\Users\Rob\Desktop\Coding\Bootcamp\myFlix-client\node_modules\@parcel\hash\parcel-hash.win32-x64-msvc.node'
+
+npm manifest: 
+  {
+    "name": "myflix-client",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "dev": "parcel src/index.html"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Drxl95/myFlix-client.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/Drxl95/myFlix-client/issues"
+    },
+    "homepage": "https://github.com/Drxl95/myFlix-client#readme",
+    "dependencies": {
+      "axios": "^0.21.1",
+      "parcel": "^2.0.0-rc.0",
+      "prop-types": "^15.7.2",
+      "react": "^17.0.2",
+      "react-bootstrap": "^1.6.1",
+      "react-dom": "^17.0.2"
+    },
+    "devDependencies": {
+      "@parcel/transformer-image": "^2.0.0-rc.0",
+      "@parcel/transformer-sass": "^2.0.0-rc.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
