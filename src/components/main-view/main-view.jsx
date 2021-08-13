@@ -12,7 +12,7 @@ import { MovieView } from '../movie-view/movie-view';
 import { DirectorView } from '../director-view/director-view';
 import { GenreView } from '../genre-view/genre-view';
 import { ProfileView } from '../profile-view/profile-view';
-// import { NavBar } from '../navbar-view/navbar-view';
+import { NavBar } from '../navbar-view/navbar-view';
 
 
 import './main-view.scss';
@@ -80,25 +80,15 @@ onLoggedOut() {
       register
     });
   }
-/*When a movie is clicked, this function is invoked and updates the state of the `selectedMovie` *property to that movie*/
-
-  // setSelectedMovie(movie) {
-  //   this.setState({
-  //     selectedMovie: movie
-  //   });
-  // }
-
-/* When a user successfully logs in, this function updates the `user` property in state to that *particular user*/
-//logs user in
-
-
 
 
 render() {
   const { movies, user } = this.state;
 
   return (
-    <><button onClick={() => { this.onLoggedOut() }}>Logout</button>
+    <>
+     <main>
+    <button onClick={() => { this.onLoggedOut() }}>Logout</button>
     <button><a href="/register">Register</a></button>
     <div className="logo-container">
 <img className="logo" src={logo}></img>
@@ -162,8 +152,8 @@ render() {
               <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
             </Col>
             if (movies.length === 0) return <div className="main-view" />;
-            return <Col md={8}>
-            </Col>
+            return 
+          
              return (
               <>
                 <Row className="m-3 navigation-main">
@@ -184,6 +174,7 @@ render() {
 
       </Row>
     </Router>
+    </main>
    </>     
   );
 }

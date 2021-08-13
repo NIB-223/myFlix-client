@@ -14,6 +14,8 @@ export class MovieCard extends React.Component {
 
 
     return (
+   
+
       <Card className="cardClass">
         <Card.Img variant="top" src={movie.ImagePath} />
         <Card.Body>
@@ -25,6 +27,7 @@ export class MovieCard extends React.Component {
           </Link>
         </Card.Body>
       </Card>
+   
     );
   }
 }
