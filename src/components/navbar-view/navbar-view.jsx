@@ -9,6 +9,7 @@ import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 
 import './navbar-view.scss';
+import logo from '../../../img/logo.jpg';
 
 export class NavBar extends React.Component {
 

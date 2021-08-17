@@ -52,7 +52,7 @@ getUser(token) {
 
 
     axios
-      .delete(`https://myflixdb20.herokuapp.com/users/${username}/movies/${movie._id}`, {
+      .delete(`https://myflixdb20.herokuapp.com/users/${username}/FavoriteMovies/${movie._id}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then(() => {

@@ -152,7 +152,6 @@ render() {
               <LoginView onLoggedIn={user => this.onLoggedIn(user)} />
             </Col>
             if (movies.length === 0) return <div className="main-view" />;
-            return 
           
              return (
               <>

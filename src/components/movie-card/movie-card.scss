@@ -12,16 +12,26 @@
 
 .btn .btn-primary {
     text-align: center!important;
+
 }
 .btn-primary {
     color: black;
     background-color: goldenrod;
     border-color: black;
-
+    
 }
 .btn-primary:hover {
     color: black;
     background-color: goldenrod;
     border-color: black;
-    
+  
+}
+.card-btns {
+    display: flex;
+    justify-content: space-between;
+  
+}
+a {
+
+    text-decoration: none!important;
 }
