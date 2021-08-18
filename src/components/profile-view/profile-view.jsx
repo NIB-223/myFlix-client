@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import { Button, Card, CardDeck, Form, Row } from 'react-bootstrap';
+
 // import './profile-view.scss';
 
 export class ProfileView extends React.Component {
@@ -66,35 +67,37 @@ getUser(token) {
   }
 
   handleUpdate(e, newName, newUsername, newPassword, newEmail, newBirthdate) {
+    e.preventDefault();
     this.setState({
       validated: null,
     });
 
     const form = e.currentTarget;
     if (form.checkValidity() === false) {
-      e.preventDefault();
       e.stopPropagation();
       this.setState({
         validated: true,
       });
       return;
     }
-    e.preventDefault();
 
     const token = localStorage.getItem('token');
     const username = localStorage.getItem('user');
 
-    axios.put(`https://myflixdb20.herokuapp.com/users/${username}`, {
-      headers: { Authorization: `Bearer ${token}` },
-      data: {
+    axios.put(`https://myflixdb20.herokuapp.com/users/${username}`, 
+      {
         Name: newName ? newName : this.state.Name,
         Username: newUsername ? newUsername : this.state.Username,
         Password: newPassword ? newPassword : this.state.Password,
         Email: newEmail ? newEmail : this.state.Email,
         Birthdate: newBirthdate ? newBirthdate : this.state.Birthdate,
       },
-    })
+      {
+        headers: { Authorization: `Bearer ${token}` },
+      }
+    )
       .then((response) => {
+        console.log(response)
         alert('Saved Changes');
         this.setState({
           Name: response.data.Name,

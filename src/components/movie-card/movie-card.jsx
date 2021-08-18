@@ -10,12 +10,14 @@ import './movie-card.scss'
 
 export class MovieCard extends React.Component {
 
-  addFavoriteMovie() {
+  addFavoriteMovie(movie) {
     const token = localStorage.getItem('token');
     const username = localStorage.getItem('user');
 
     axios
-      .post(`https://myflixdb20.herokuapp.com/users/${username}/FavoriteMovies/${movie._id}`, {
+      .post(`https://myflixdb20.herokuapp.com/users/${username}/FavoriteMovies/${movie._id}`, 
+      {},
+      {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then(() => {
@@ -23,7 +25,7 @@ export class MovieCard extends React.Component {
       })
       .catch(function (error) {
         console.log(error);
-      })
+      });
   }
   render() {
 
@@ -31,24 +33,20 @@ export class MovieCard extends React.Component {
 
     
     return (
-   
-
       <Card className="cardClass">
         <Card.Img variant="top" src={movie.ImagePath} />
         <Card.Body>
           <Card.Title>{movie.Title}</Card.Title>
           <Card.Text>{movie.Description}</Card.Text>
           <Card.Text>{movie.Genre.Name}</Card.Text>
-          <Link to={`/movies/${movie._id}`}>
-            <div className="card-btns">
+          <div className="card-btns">
+            <Link to={`/movies/${movie._id}`}>
               <Button class="btn-primary" variant="primary">View Movie</Button>
-              <Button class="btn-primary" variant="primary" value={movie._id} onClick={(e) => this.addFavoriteMovie(e, movie)}>Favorite</Button>
-            </div>
-          
-          </Link>
+            </Link>
+          <Button class="btn-primary" variant="primary" value={movie._id} onClick={(e) => this.addFavoriteMovie(e, movie)}>Favorite</Button>
+          </div>
         </Card.Body>
       </Card>
-   
     );
   }
 }
