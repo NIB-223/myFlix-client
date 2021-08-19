@@ -88,12 +88,8 @@ render() {
   return (
     <>
      <main>
-    <button onClick={() => { this.onLoggedOut() }}>Logout</button>
-    <button><a href="/register">Register</a></button>
-    <div className="logo-container">
-<img className="logo" src={logo}></img>
-
-</div>
+       { user && <NavBar user={user}/>}
+    {/* <button onClick={() => { this.onLoggedOut() }}>Logout</button> */}
     <Router>
       <Row className="main-view justify-content-md-center">
         <Route exact path="/" render={() => {
@@ -156,9 +152,7 @@ render() {
              return (
               <>
                 <Row className="m-3 navigation-main">
-                  <Col>
-                    <NavBar user={user} />
-                  </Col>
+                
                 </Row>
                 <Row>
                   <Col>
@@ -169,8 +163,6 @@ render() {
             )
           }
           } />
-
-
       </Row>
     </Router>
     </main>

@@ -40,8 +40,7 @@ render () {
             <NavDropdown.Item as={Link} to="/">Movies</NavDropdown.Item>
             <NavDropdown.Item as={Link} to={`/users/${this.props.user}`}>Account Details</NavDropdown.Item>
             <NavDropdown.Divider />
-            <NavDropdown.Item></NavDropdown.Item>
-            <Button variant="link" onClick={() => { this.onLoggedOut() }}>Logout</Button>
+            <NavDropdown.Item><Button variant="link" onClick={() => { this.onLoggedOut() }}>Logout</Button></NavDropdown.Item>
           </NavDropdown>
       </Nav>
       </Navbar.Collapse>

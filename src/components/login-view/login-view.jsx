@@ -33,7 +33,7 @@ export function LoginView(props) {
 
   return (
     <>
-   
+       <button><a href="/register">Create an Account</a></button>
     <h1 className="login-title" >Login</h1>
     <Form>
     <Form.Group className="mb-3 pt-5"  controlId="formUsername">

@@ -47,14 +47,15 @@ getUser(token) {
       });
   }
 
-  removeFavouriteMovie() {
+  removeFavouriteMovie(movie) {
     const token = localStorage.getItem('token');
     const username = localStorage.getItem('user');
-
-
     axios
-      .delete(`https://myflixdb20.herokuapp.com/users/${username}/FavoriteMovies/${movie._id}`, {
-        headers: { Authorization: `Bearer ${token}` },
+      .delete(`https://myflixdb20.herokuapp.com/users/${username}/FavoriteMovies/${movie._id}`, 
+      {},
+
+      {
+         headers: { Authorization: `Bearer ${token}` },
       })
       .then(() => {
         alert('Movie was removed');
@@ -174,7 +175,7 @@ getUser(token) {
                           <Card.Img style={{ width: '18rem' }} className="movieCard" variant="top" src={movie.ImageURL} />
                           <Card.Body>
                             <Card.Title className="movie-card-title">{movie.Title}</Card.Title>
-                            <Button size='sm' className='profile-button remove-favorite' variant='danger' value={movie._id} onClick={(e) => this.removeFavouriteMovie(e, movie)}>
+                            <Button size='sm' className='profile-button remove-favorite' variant='danger' value={movie._id} onClick={(e) => this.removeFavouriteMovie(movie)}>
                               Remove
                             </Button>
                           </Card.Body>
