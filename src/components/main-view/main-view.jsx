@@ -88,9 +88,9 @@ render() {
   return (
     <>
      <main>
-       { user && <NavBar user={user}/>}
     {/* <button onClick={() => { this.onLoggedOut() }}>Logout</button> */}
     <Router>
+    { user && <NavBar user={user}/>}
       <Row className="main-view justify-content-md-center">
         <Route exact path="/" render={() => {
           if (!user) return <Col>

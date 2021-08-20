@@ -30,22 +30,21 @@ render () {
   return (
 
     <Navbar className="navigation-main" collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Container>
-      <Navbar.Brand href="/"><img className="myFlix-logo-nav" width={100} src={logo} alt="myFlix Logo" /></Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
-      <Nav className="menu-items">
-        <Nav.Link href="">Hi {`${this.props.user}`} </Nav.Link>
-        <NavDropdown title='' id="collasible-nav-dropdown">
-            <NavDropdown.Item as={Link} to="/">Movies</NavDropdown.Item>
-            <NavDropdown.Item as={Link} to={`/users/${this.props.user}`}>Account Details</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <NavDropdown.Item><Button variant="link" onClick={() => { this.onLoggedOut() }}>Logout</Button></NavDropdown.Item>
-          </NavDropdown>
-      </Nav>
-      </Navbar.Collapse>
-      </Container>
-    </Navbar>
+  <Container>
+  <Navbar.Brand href="/"><img className="myFlix-logo-nav" width={100} src={logo} alt="myFlix Logo" /></Navbar.Brand>
+  <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <Navbar.Collapse id="responsive-navbar-nav">
+  <Nav className="menu-items">
+    <NavDropdown title={`Hi ${this.props.user}`} id="collasible-nav-dropdown">
+        <NavDropdown.Item as={Link} to="/">Movies</NavDropdown.Item>
+        <NavDropdown.Item as={Link} to={`/users/${this.props.user}`}>Account</NavDropdown.Item>
+        <NavDropdown.Divider />
+        <NavDropdown.Item><Button variant="link" onClick={() => { this.onLoggedOut() }}>Logout</Button></NavDropdown.Item>
+      </NavDropdown>
+  </Nav>
+  </Navbar.Collapse>
+  </Container>
+</Navbar>
       );
     }
 }

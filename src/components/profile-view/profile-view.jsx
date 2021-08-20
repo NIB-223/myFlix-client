@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import { Button, Card, CardDeck, Form, Row } from 'react-bootstrap';
+import './profile.view.scss';
 
 // import './profile-view.scss';
 
@@ -52,7 +53,6 @@ getUser(token) {
     const username = localStorage.getItem('user');
     axios
       .delete(`https://myflixdb20.herokuapp.com/users/${username}/FavoriteMovies/${movie._id}`, 
-      {},
 
       {
          headers: { Authorization: `Bearer ${token}` },
