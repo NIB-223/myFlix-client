@@ -187,7 +187,7 @@ getUser(token) {
             </div>
           </Card.Body>
 
-          <h1 className="section">Update Profile</h1>
+          <h1 className="section">Change Account Information</h1>
           <Card.Body>
             <Form noValidate validated={validated} className="update-form" onSubmit={(e) => this.handleUpdate(e, this.Name, this.Username, this.Password, this.Email, this.Birthdate)}>
 
@@ -221,9 +221,8 @@ getUser(token) {
               <Button variant='danger' type="submit">
                 Update
               </Button>
-
-              <h3>Delete your Account</h3>
               <Card.Body>
+                <br></br>
                 <Button variant='danger' onClick={(e) => this.handleDeleteUser(e)}>
                   Delete Account
                 </Button>

@@ -37,7 +37,7 @@ render () {
   <Nav className="menu-items">
     <NavDropdown title={`Hi ${this.props.user}`} id="collasible-nav-dropdown">
         <NavDropdown.Item as={Link} to="/">Movies</NavDropdown.Item>
-        <NavDropdown.Item as={Link} to={`/users/${this.props.user}`}>Account</NavDropdown.Item>
+        <NavDropdown.Item as={Link} to={`/users/${this.props.user}`}>Change Account Info</NavDropdown.Item>
         <NavDropdown.Divider />
         <NavDropdown.Item><Button variant="link" onClick={() => { this.onLoggedOut() }}>Logout</Button></NavDropdown.Item>
       </NavDropdown>
