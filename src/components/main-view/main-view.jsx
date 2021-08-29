@@ -3,8 +3,13 @@ import axios from 'axios';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import { connect } from 'react-redux';
+
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 
+
+import { setMovies } from '../../actions/actions';
+import MoviesList from '../movies-list/movies-list';
 import { LoginView } from '../login-view/login-view';
 import { RegistrationView } from '../registration-view/registration-view';
 import { MovieCard } from '../movie-card/movie-card';
@@ -14,18 +19,14 @@ import { GenreView } from '../genre-view/genre-view';
 import { ProfileView } from '../profile-view/profile-view';
 import { NavBar } from '../navbar-view/navbar-view';
 
-
 import './main-view.scss';
 import logo from '../../../img/logo.jpg';
 
-
-export class MainView extends React.Component {
+class MainView extends React.Component {
 
   constructor() {
     super();
-// Initial state is set to null
     this.state = {
-      movies: [],
       user: null
     };
   }
@@ -35,10 +36,7 @@ getMovies(token) {
     headers: { Authorization: `Bearer ${token}`}
   })
   .then(response => {
-    // Assign the result to the state
-    this.setState({
-      movies: response.data
-    });
+    this.props.setMovies(response.data);
   })
   .catch(function (error) {
     console.log(error);
@@ -83,7 +81,8 @@ onLoggedOut() {
 
 
 render() {
-  const { movies, user } = this.state;
+  let { movies } = this.props;
+  let { user } = this.state;
 
   return (
     <>
@@ -98,11 +97,12 @@ render() {
         </Col>
           if (movies.length === 0) return <div className="main-view" />;
 
-          return movies.map(m => (
-            <Col md={3} key={m._id}>
-              <MovieCard movie={m} />
-            </Col>
-          ))
+          return <MoviesList movies={movies}/>;
+          // return movies.map(m => (
+          //   <Col md={3} key={m._id}>
+          //     <MovieCard movie={m} />
+          //   </Col>
+          // ))
         }} />
         <Route path="/register" render={() => {
            if (user) return <Redirect to="/" />
@@ -170,4 +170,8 @@ render() {
   );
 }
 }
-    export default MainView;
+let mapStateToProps = state => {
+  return { movies: state.movies }
+}
+
+export default connect(mapStateToProps, { setMovies } )(MainView);
