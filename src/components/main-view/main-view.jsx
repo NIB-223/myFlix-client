@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 
 
-import { setMovies } from '../../actions/actions';
+import { setUser, setMovies } from '../../actions/actions';
 import MoviesList from '../movies-list/movies-list';
 import { LoginView } from '../login-view/login-view';
 import { RegistrationView } from '../registration-view/registration-view';
@@ -26,9 +26,9 @@ class MainView extends React.Component {
 
   constructor() {
     super();
-    this.state = {
-      user: null
-    };
+    // this.state = {
+    //   user: null
+    // };
   }
 
 getMovies(token) {
@@ -81,8 +81,8 @@ onLoggedOut() {
 
 
 render() {
-  let { movies } = this.props;
-  let { user } = this.state;
+  let { movies, user } = this.props;
+
 
   return (
     <>
@@ -171,7 +171,10 @@ render() {
 }
 }
 let mapStateToProps = state => {
-  return { movies: state.movies }
+  return { 
+    movies: state.movies,
+    user: state.user
+  }
 }
 
-export default connect(mapStateToProps, { setMovies } )(MainView);
+export default connect(mapStateToProps, { setUser, setMovies } )(MainView);

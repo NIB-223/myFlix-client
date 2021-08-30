@@ -5,7 +5,7 @@
 //Step 2
 import { combineReducers } from 'redux';
 
-import { SET_FILTER, SET_MOVIES } from '../actions/actions';
+import { SET_FILTER, SET_MOVIES, SET_USER } from '../actions/actions';
 
 //add reducer
 function visibilityFilter(state = '', action) {
@@ -25,11 +25,21 @@ function movies(state = [], action) {
             return state;
     }
 }
+//add reducer 
+function user(state = '', action) {
+    switch (action.type) {
+        case SET_USER:
+            return action.value;
+        default:
+            return state;
+    }
+}
 //Step 3
 //combined reducer (register reducer)
 const moveisApp = combineReducers({  //registered reducers 
     visibilityFilter,
-    movies
+    movies,
+    user
 });
 
 export default moveisApp; 
