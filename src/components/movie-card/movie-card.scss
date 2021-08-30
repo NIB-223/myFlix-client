@@ -62,3 +62,10 @@ a {
         min-height: 225px!important;
     }
 }
+
+@media screen and (max-width: 767px) {
+    .card-img, .card-img-bottom, .card-img-top {
+        max-height: auto;
+        min-height: auto;
+    }
+}
