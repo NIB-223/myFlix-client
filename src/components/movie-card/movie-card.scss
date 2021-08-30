@@ -48,3 +48,10 @@ a {
         min-height: 425px!important;
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .card-img, .card-img-bottom, .card-img-top {
+        max-height: 325px!important;
+        min-height: 325px!important;
+    }
+}
