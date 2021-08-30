@@ -1,5 +1,8 @@
 ## MyFlix Client Application
 
+__Challenges__
+React was challenging and getting the client side app routing was very difficult. 
+
 __Tools Used__
 React React-Bootstrap Redux
 
