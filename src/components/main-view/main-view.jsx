@@ -26,9 +26,9 @@ class MainView extends React.Component {
 
   constructor() {
     super();
-    // this.state = {
-    //   user: null
-    // };
+    this.state = {
+      user: null
+    };
   }
 
 getMovies(token) {
@@ -81,7 +81,8 @@ onLoggedOut() {
 
 
 render() {
-  let { movies, user } = this.props;
+  let { movies } = this.props;
+  let { user } = this.state;
 
 
   return (
