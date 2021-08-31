@@ -66,6 +66,6 @@ a {
 @media screen and (max-width: 767px) {
     .card-img, .card-img-bottom, .card-img-top {
       
-        height: auto!important;
+        max-height: 100%;
     }
 }
