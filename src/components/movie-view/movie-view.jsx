@@ -23,7 +23,7 @@ export class MovieView extends React.Component {
 
     return (
 <Card>
-<Card.Img variant="top" src={movie.ImagePath} />
+<Card.Img className="movie-viewIMG" variant="top" src={movie.ImagePath} />
 <Card.Body>
   <Card.Title>{movie.Title}</Card.Title>
   <Card.Text>{movie.Description}</Card.Text>
@@ -31,15 +31,14 @@ export class MovieView extends React.Component {
   <Card.Text>Directed by: {movie.Director.Name}</Card.Text>
   <Card.Text>Starring: {movie.Actors}</Card.Text>
 <div className="btn-container">
-  <div className="details-btn-flex">
     <Link to={`/directors/${movie.Director.Name}`}>
-        <Button variant="link">Director Info</Button>
+        <Button className="info-btn" variant="link">Director Info</Button>
     </Link>
 
     <Link to={`/genres/${movie.Genre.Name}`}>
-      <Button variant="link">Genre Info</Button>
+      <Button  className="info-btn"  variant="link">Genre Info</Button>
     </Link>
-  </div>
+
     <div style={{textAlign: "center"}}>
       <Button className="back-btn" onClick={() => onBackClick(null)} variant="primary">Back</Button>
     </div>

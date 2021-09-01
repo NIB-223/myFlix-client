@@ -3,7 +3,7 @@ import axios from 'axios';
 import PropTypes from 'prop-types';
 
 import { Link } from "react-router-dom";
-import { Button, Card, CardDeck, Form, Row } from 'react-bootstrap';
+import { Button, Card, CardDeck, Form, Row, Col } from 'react-bootstrap';
 import './profile.view.scss';
 
 // import './profile-view.scss';
@@ -172,22 +172,22 @@ getUser(token) {
                 movies.map((movie) => {
                   if (movie._id === FavoriteMovies.find((favMovie) => favMovie === movie._id)) {
                     return (
-                      <CardDeck className="movie-card-deck">
-                        <Card className="favorite-movie-card" key={movie._id}>
-                          <Card.Img className="movieCard" variant="top" src={movie.ImagePath} />
-                          <Card.Body>
-                            <Card.Title className="movie-card-title">{movie.Title}</Card.Title>
-                            <div className="fav-movie-btns">
-                            <Button size='sm' className='remove-btn' variant='danger' value={movie._id} onClick={(e) => this.removeFavouriteMovie(movie)}>
-                              Remove
+                      <Card className="cardClass">
+                      <Card.Img  className="card-image" variant="top" src={movie.ImagePath} />
+                      <Card.Body>
+                        <Card.Title>{movie.Title}</Card.Title>
+                        <Card.Text>{movie.Genre.Name}</Card.Text>
+                        <Card.Text>{movie.Description}</Card.Text>
+                        <div className="fav-movie-btns">
+                          <Link to={`/movies/${movie._id}`}>
+                            <Button className="movieCard-btn" variant="primary">View Movie</Button>
+                          </Link>
+                          <Button size='sm' className='remove-btn' variant='danger' value={movie._id} onClick={(e) => this.removeFavouriteMovie(movie)}>
+                             Remove
                             </Button>
-                            <Link to={`/movies/${movie._id}`}>
-                            <Button size='sm' class="btn-primary movie-card" variant="primary">View Movie</Button>
-                            </Link>                       
-                            </div>
-                          </Card.Body>
-                        </Card>
-                      </CardDeck>
+                        </div>
+                      </Card.Body>
+                    </Card>
                     );
                   }
                 })}
