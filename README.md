@@ -2,7 +2,7 @@
 This is a the front end of a RESTful API (myFlix) I built that contains a list of movies and relevent data including directors, actors, genre info etc.  It was created with React and has Redux added to it.  
 
 
-## Getting Started
+# Getting Started
 
 ### Installing Dependencies
  `npm install`
