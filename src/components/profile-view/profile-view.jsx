@@ -173,7 +173,7 @@ getUser(token) {
                   if (movie._id === FavoriteMovies.find((favMovie) => favMovie === movie._id)) {
                     return (
                       <Card className="cardClass">
-                      <Card.Img  className="card-image" variant="top" src={movie.ImagePath} />
+                      <Card.Img  id="fav-movie-image" variant="top" src={movie.ImagePath} />
                       <Card.Body>
                         <Card.Title>{movie.Title}</Card.Title>
                         <Card.Text>{movie.Genre.Name}</Card.Text>
