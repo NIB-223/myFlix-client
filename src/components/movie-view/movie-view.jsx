@@ -23,7 +23,7 @@ export class MovieView extends React.Component {
 
     return (
 <Card>
-<Card.Img className="movie-viewIMG" variant="top" src={movie.ImagePath} />
+<Card.Img id="movie-viewIMG" variant="top" src={movie.ImagePath} />
 <Card.Body>
   <Card.Title>{movie.Title}</Card.Title>
   <Card.Text>{movie.Description}</Card.Text>
