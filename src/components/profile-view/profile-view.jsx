@@ -173,8 +173,8 @@ getUser(token) {
                   if (movie._id === FavoriteMovies.find((favMovie) => favMovie === movie._id)) {
                     return (
                       <CardDeck className="movie-card-deck">
-                        <Card className="favorites-item card-content" style={{ width: '16rem' }} key={movie._id}>
-                          <Card.Img style={{ width: '18rem' }} className="movieCard" variant="top" src={movie.ImageURL} />
+                        <Card className="favorite-movie-card" style={{ width: '16rem' }} key={movie._id}>
+                          <Card.Img style={{ width: '18rem' }} className="movieCard" variant="top" src={movie.ImagePath} />
                           <Card.Body>
                             <Card.Title className="movie-card-title">{movie.Title}</Card.Title>
                             <div className="fav-movie-btns">
