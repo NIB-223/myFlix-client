@@ -15,7 +15,7 @@ __To launch app__ <br>
 parcel [path to index.html]
 ```
 <br>
-*The default path is*<br>
+The default path is<br>
 
 ```sh
 parcel src/index.html
@@ -25,8 +25,9 @@ parcel src/index.html
 __In browser__<br>
 App will load in browser on local server 1234<br>
 URL in browser:<br>
-`http://localhost:1234/`<br>
-
+```sh
+http://localhost:1234/
+```
 
 __Tools Used__
 - React 
