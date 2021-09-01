@@ -9,10 +9,26 @@
     justify-content: space-evenly
 }
 
-.cardClass {
+.Fav-movie-card {
     width: 16rem;
 }
 
+#fav-movie-image {
+    max-height: none;
+    min-height: auto;
+    width: 30%;
+}
+
+.fav-movie-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+}
+.remove-btn {
+    margin-top: 1rem;
+    padding: 6px 12px;
+}
 .btn {
     background-color: goldenrod;
     color: black;
@@ -23,18 +39,6 @@
     background-color: goldenrod;
     color: black;
     border-color: black;
-}
-
-.fav-movie-btns {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-top: 1.5rem;
-}
-
-.remove-btn {
-    margin-top: 1rem;
-    padding: 6px 12px;
 }
 
 .form-label {
@@ -53,9 +57,4 @@
 
 .form-validation-error {
     color: red;
-}
-#fav-movie-image {
-    max-height: none;
-    min-height: auto;
-    width: 30%;
 }
