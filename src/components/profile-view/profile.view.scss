@@ -10,3 +10,22 @@
     border-color: black;
 }
 
+.fav-movie-btns {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+}
+
+.form-label {
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+}
+
+.update-btn {
+    margin-top: 1.5rem;
+    width: 50%;
+}
+
+.row {
+    justify-content: center;
+}

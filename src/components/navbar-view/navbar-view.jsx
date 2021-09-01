@@ -39,8 +39,10 @@ render () {
         <NavDropdown.Item as={Link} to="/">Movies</NavDropdown.Item>
         <NavDropdown.Item as={Link} to={`/users/${this.props.user}`}>Change Account Info</NavDropdown.Item>
         <NavDropdown.Divider />
-        <NavDropdown.Item><Button variant="link" onClick={() => { this.onLoggedOut() }}>Logout</Button></NavDropdown.Item>
-      </NavDropdown>
+        <div style={{textAlign: 'right'}}>
+          <NavDropdown.Item><Button className="logout-btn" variant="link" onClick={() => { this.onLoggedOut() }}>Logout</Button></NavDropdown.Item>
+        </div>
+     </NavDropdown>   
   </Nav>
   </Navbar.Collapse>
   </Container>

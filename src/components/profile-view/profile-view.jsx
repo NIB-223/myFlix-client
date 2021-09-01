@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
+
+import { Link } from "react-router-dom";
 import { Button, Card, CardDeck, Form, Row } from 'react-bootstrap';
 import './profile.view.scss';
 
@@ -175,9 +177,14 @@ getUser(token) {
                           <Card.Img style={{ width: '18rem' }} className="movieCard" variant="top" src={movie.ImageURL} />
                           <Card.Body>
                             <Card.Title className="movie-card-title">{movie.Title}</Card.Title>
-                            <Button size='sm' className='profile-button remove-favorite' variant='danger' value={movie._id} onClick={(e) => this.removeFavouriteMovie(movie)}>
+                            <div className="fav-movie-btns">
+                            <Button size='sm' className='remove-btn' variant='danger' value={movie._id} onClick={(e) => this.removeFavouriteMovie(movie)}>
                               Remove
                             </Button>
+                            <Link to={`/movies/${movie._id}`}>
+                            <Button size='sm' class="btn-primary movie-card" variant="primary">View Movie</Button>
+                            </Link>                       
+                            </div>
                           </Card.Body>
                         </Card>
                       </CardDeck>
@@ -217,12 +224,14 @@ getUser(token) {
                 <Form.Label className="form-label">Birthdate</Form.Label>
                 <Form.Control type="date" placeholder="Change Birthdate" onChange={(e) => this.setBirthdate(e.target.value)} />
               </Form.Group>
-
-              <Button variant='danger' type="submit">
-                Update
-              </Button>
-              <Card.Body>
-                <br></br>
+                <div style={{textAlign: 'center'}}>
+                    <Button className="update-btn" variant='danger' type="submit">
+                    Update
+                  </Button>
+                </div>
+               
+     
+              <Card.Body style={{textAlign: "right", marginTop: '4rem'}}>
                 <Button variant='danger' onClick={(e) => this.handleDeleteUser(e)}>
                   Delete Account
                 </Button>
