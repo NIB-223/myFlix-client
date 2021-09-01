@@ -16,7 +16,7 @@ Parcel is used for this build, if you don't have parcel installed globally, inst
 parcel [path to index.html]
 ```
 <br>
-The default path is<br>
+The default path for this build is<br>
 
 ```sh
 parcel src/index.html
