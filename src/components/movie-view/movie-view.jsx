@@ -23,7 +23,10 @@ export class MovieView extends React.Component {
 
     return (
 <Card>
-<Card.Img id="movie-viewIMG" variant="top" src={movie.ImagePath} />
+<div style={{textAlign: "center"}}>
+  <Card.Img id="movie-viewIMG" variant="top" src={movie.ImagePath} />
+</div>
+
 <Card.Body>
   <Card.Title>{movie.Title}</Card.Title>
   <Card.Text>{movie.Description}</Card.Text>
