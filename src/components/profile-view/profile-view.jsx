@@ -163,7 +163,7 @@ getUser(token) {
     return (
       <Row className="profile-view">
         <Card className="profile-card">
-          <h2>Your Favorites Movies</h2>
+          <h2 className="favorite-movies-title">Your Favorites Movies</h2>
           <Card.Body>
             {FavoriteMovies.length === 0 && <div className="text-center">Empty.</div>}
 
@@ -232,7 +232,7 @@ getUser(token) {
                
      
               <Card.Body style={{textAlign: "right", marginTop: '4rem'}}>
-                <Button variant='danger' onClick={(e) => this.handleDeleteUser(e)}>
+                <Button className="delete-btn" variant='danger' onClick={(e) => this.handleDeleteUser(e)}>
                   Delete Account
                 </Button>
               </Card.Body>
