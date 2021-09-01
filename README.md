@@ -5,12 +5,14 @@ This is a the front end of a RESTful API (myFlix) I built that contains a list o
 # Getting Started
 
 ### Installing Dependencies
- `npm install`
+```sh
+npm install
+```
 
 ### Parcel
 Parcel is used for this build, if you don't have parcel installed globally, installation instructions are available [here](https://parceljs.org/getting_started.html)<br>
 
-__To launch app__ <br>
+### To Launch App <br>
 ```sh
 parcel [path to index.html]
 ```
@@ -22,7 +24,7 @@ parcel src/index.html
 ```
 <br>
 
-__In browser__<br>
+### In browser
 App will load in browser on local server 1234<br>
 URL in browser:<br>
 ```sh
@@ -48,6 +50,4 @@ __Dependencies__
  __devDependencies__
  - parcel
 
- __to start app__
- parcel src/index.html
  
