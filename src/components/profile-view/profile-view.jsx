@@ -180,8 +180,6 @@ getUser(token) {
                       </div>
                       <Card.Body>
                         <Card.Title>{movie.Title}</Card.Title>
-                        <Card.Text>{movie.Genre.Name}</Card.Text>
-                        <Card.Text>{movie.Description}</Card.Text>
                         <div className="fav-movie-btns">
                           <Link to={`/movies/${movie._id}`}>
                             <Button className="movieCard-btn" variant="primary">View Movie</Button>
