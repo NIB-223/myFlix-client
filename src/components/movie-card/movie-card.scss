@@ -66,6 +66,14 @@ a {
     .card-btns {
         display: flex;
         flex-direction: column;
-        
+    }
+   
+}
+
+@media screen and (max-width: 768px) {
+    .card-image{
+        width: 100%;
+        max-height: none;
+        min-height: auto;
     }
 }
