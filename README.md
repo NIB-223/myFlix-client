@@ -11,7 +11,9 @@ This is a the front end of a RESTful API (myFlix) I built that contains a list o
 Parcel is used for this build, if you don't have parcel installed globally, installation instructions are available [here](https://parceljs.org/getting_started.html)<br>
 
 __To launch app__ <br>
-`parcel [path to index.html]`<br>
+```sh
+parcel [path to index.html]
+```<br>
 *The default path is*<br>
 `parcel src/index.html`<br>
 
