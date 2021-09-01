@@ -8,17 +8,17 @@ This is a the front end of a RESTful API (myFlix) I built that contains a list o
  `npm install`
 
 ### Parcel
-Parcel is used for this build, if you don't have parcel installed globally, installation instructions are available [here](https://parceljs.org/getting_started.html)
+Parcel is used for this build, if you don't have parcel installed globally, installation instructions are available [here](https://parceljs.org/getting_started.html)<br>
 
-__To launch app__ 
-`parcel [path to index.html]`
-*The default path is*
-`parcel src/index.html`
+__To launch app__ <br>
+`parcel [path to index.html]`<br>
+*The default path is*<br>
+`parcel src/index.html`<br>
 
-__In browser__
-App will load in browser on local server 1234
-URL in browser:
-`http://localhost:1234/`
+__In browser__<br>
+App will load in browser on local server 1234<br>
+URL in browser:<br>
+`http://localhost:1234/`<br>
 
 
 __Tools Used__
