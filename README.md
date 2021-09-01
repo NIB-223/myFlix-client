@@ -9,10 +9,9 @@ This is a the front end of a RESTful API (myFlix) I built that contains a list o
 npm install
 ```
 
-### Parcel
-Parcel is used for this build, if you don't have parcel installed globally, installation instructions are available [here](https://parceljs.org/getting_started.html)<br>
 
 ### To Launch App <br>
+Parcel is used for this build, if you don't have parcel installed globally, installation instructions are available [here](https://parceljs.org/getting_started.html)<br>
 ```sh
 parcel [path to index.html]
 ```
