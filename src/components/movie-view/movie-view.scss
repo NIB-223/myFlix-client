@@ -1,0 +1,20 @@
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.details-btn-flex {
+    display: flex;
+    justify-content: space-around;
+    margin-top: .25rem;
+}
+.btn-link {
+    text-decoration: none;
+}
+.back-btn {
+    width: 50%;
+    margin-top: 3.75rem;
+
+}

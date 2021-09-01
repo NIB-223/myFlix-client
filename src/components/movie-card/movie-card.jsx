@@ -37,13 +37,13 @@ export class MovieCard extends React.Component {
         <Card.Img  className="card-image" variant="top" src={movie.ImagePath} />
         <Card.Body>
           <Card.Title>{movie.Title}</Card.Title>
-          <Card.Text>{movie.Description}</Card.Text>
           <Card.Text>{movie.Genre.Name}</Card.Text>
+          <Card.Text>{movie.Description}</Card.Text>
           <div className="card-btns">
             <Link to={`/movies/${movie._id}`}>
               <Button class="btn-primary movie-card" variant="primary">View Movie</Button>
             </Link>
-          <Button class="btn-primary movie-card" variant="primary" value={movie._id} onClick={(e) => this.addFavoriteMovie(movie)}>Favorite</Button>
+          <Button class="btn-primary movie-card" variant="primary" value={movie._id} onClick={(e) => this.addFavoriteMovie(movie)}>Add Favorite</Button>
           </div>
         </Card.Body>
       </Card>

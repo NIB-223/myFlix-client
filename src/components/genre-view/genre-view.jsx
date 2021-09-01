@@ -17,8 +17,9 @@ export class GenreView extends React.Component {
 <Card.Body>
   <Card.Title>{genre.Name}</Card.Title>
   <Card.Text>Definition: {genre.Description}</Card.Text>
-  {/* <Card.Text>Other Movies:  {directorMovies.map((m, i) => <Link to={`/movies/${m.Title}`} key={i}>{m.Title}</Link>)}</Card.Text> */}
-  <Button onClick={() => onBackClick(null)} variant="primary">Back</Button>
+  <div style={{textAlign: "center"}}>
+  <Button onClick={() => onBackClick(null)} className="back-btn" variant="primary">Back</Button>
+  </div>
 </Card.Body>
 </Card>
         );

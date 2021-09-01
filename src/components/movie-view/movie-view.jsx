@@ -5,6 +5,8 @@ import Card from 'react-bootstrap/Card';
 
 import { Link } from "react-router-dom";
 
+import './movie-view.scss'
+
 
 export class MovieView extends React.Component {
 
@@ -28,14 +30,22 @@ export class MovieView extends React.Component {
   <Card.Text>Genre:  {movie.Genre.Name}</Card.Text>
   <Card.Text>Directed by: {movie.Director.Name}</Card.Text>
   <Card.Text>Starring: {movie.Actors}</Card.Text>
-<Link to={`/directors/${movie.Director.Name}`}>
-  <Button variant="link">Director Info</Button>
-</Link>
+<div className="btn-container">
+  <div className="details-btn-flex">
+    <Link to={`/directors/${movie.Director.Name}`}>
+        <Button variant="link">Director Info</Button>
+    </Link>
 
-<Link to={`/genres/${movie.Genre.Name}`}>
-  <Button variant="link">Genre Info</Button>
-</Link>
-  <Button onClick={() => onBackClick(null)} variant="primary">Back</Button>
+    <Link to={`/genres/${movie.Genre.Name}`}>
+      <Button variant="link">Genre Info</Button>
+    </Link>
+  </div>
+    <div style={{textAlign: "center"}}>
+      <Button className="back-btn" onClick={() => onBackClick(null)} variant="primary">Back</Button>
+    </div>
+      
+</div>
+
 </Card.Body>
 </Card>
        

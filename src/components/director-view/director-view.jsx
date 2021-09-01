@@ -20,8 +20,10 @@ export class DirectorView extends React.Component {
   <Card.Title>{director.Name}</Card.Title>
   <Card.Text>Born: {director.Birth}</Card.Text>
   <Card.Text>Bio:  {director.Bio}</Card.Text>
-  {/* <Card.Text>Other Movies:  {directorMovies.map((m, i) => <Link to={`/movies/${m.Title}`} key={i}>{m.Title}</Link>)}</Card.Text> */}
-  <Button onClick={() => onBackClick(null)} variant="primary">Back</Button>
+  <div style={{textAlign: "center"}}>
+  <Button onClick={() => onBackClick(null)} className="back-btn" variant="primary">Back</Button>
+  </div>
+ 
 </Card.Body>
 </Card>
         );
