@@ -13,9 +13,14 @@ Parcel is used for this build, if you don't have parcel installed globally, inst
 __To launch app__ <br>
 ```sh
 parcel [path to index.html]
-```<br>
+```
+<br>
 *The default path is*<br>
-`parcel src/index.html`<br>
+
+```sh
+parcel src/index.html
+```
+<br>
 
 __In browser__<br>
 App will load in browser on local server 1234<br>
