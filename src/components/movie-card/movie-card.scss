@@ -35,28 +35,28 @@ a {
     text-decoration: none!important;
 }
 
-.card-img, .card-img-bottom, .card-img-top {
+.card-image{
     width: 100%;
     max-height: 450px;
     min-height: 450px;
 }
  
 @media screen and (max-width: 1399px) and (min-width: 1201px) {
-    .card-img, .card-img-bottom, .card-img-top {
+    .card-image{
         max-height: 425px!important;
         min-height: 425px!important;
     }
 }
 
 @media screen and (max-width: 1200px) and (min-width: 993px) {
-    .card-img, .card-img-bottom, .card-img-top {
+    .card-image {
         max-height: 325px!important;
         min-height: 325px!important;
     }
 }
 
 @media screen and (max-width: 992px) and (min-width: 768px) {
-    .card-img, .card-img-bottom, .card-img-top {
+    .card-image {
         max-height: 225px!important;
         min-height: 225px!important;
     }
