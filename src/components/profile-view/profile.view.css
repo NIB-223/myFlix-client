@@ -1,0 +1,12 @@
+.btn {
+  background-color: goldenrod;
+  color: black;
+  border-color: black;
+}
+
+.btn-danger:hover {
+  background-color: goldenrod;
+  color: black;
+  border-color: black;
+}
+/*# sourceMappingURL=profile.view.css.map */

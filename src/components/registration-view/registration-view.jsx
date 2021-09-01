@@ -71,7 +71,7 @@ const formValidation = () => {
 
 return (
 <>
-<h1>Register</h1>
+<h1 className="register-title">Register</h1>
 <Form>
 <Form.Group className="mb-3 pt-5" controlId="formUsername">
   <Form.Label>Username:</Form.Label>
@@ -113,10 +113,12 @@ return (
   <Form.Label>Date of Birth:</Form.Label>
   <Form.Control required size="lg" type="date" value={birthDate} onChange={e => setBirthDate(e.target.value)} />
 </Form.Group>
+<div style={{textAlign: "center"}}>
+  <Button className="register-btn" variant="primary" btn-type="submit" onClick={handleSubmit}>
+      Register
+  </Button>
+</div>
 
-<Button variant="primary" btn-type="submit" onClick={handleSubmit}>
-  Register
-</Button>
 
 </Form>
 
