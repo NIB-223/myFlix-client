@@ -2,15 +2,7 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-.favorites-movies {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly
-}
 
-.cardClass {
-    width: 16rem;
-}
 .btn {
     background-color: goldenrod;
     color: black;
@@ -25,12 +17,8 @@
 
 .fav-movie-btns {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
     margin-top: 1.5rem;
-}
-.remove-btn {
-    margin-top: 1rem;
-    padding: 6px 12px;
 }
 
 .form-label {

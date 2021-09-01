@@ -3,7 +3,7 @@ import axios from 'axios';
 import PropTypes from 'prop-types';
 
 import { Link } from "react-router-dom";
-import { Container, Button, Card, CardDeck, Form, Row, Col } from 'react-bootstrap';
+import { Button, Card, CardDeck, Form, Row, Col } from 'react-bootstrap';
 import './profile.view.scss';
 
 // import './profile-view.scss';
@@ -172,9 +172,7 @@ getUser(token) {
                 movies.map((movie) => {
                   if (movie._id === FavoriteMovies.find((favMovie) => favMovie === movie._id)) {
                     return (
-                     
-                        
-                      <Card  className="cardClass">
+                      <Card className="cardClass">
                       <div style={{textAlign: 'center'}}>
                       <Card.Img  id="fav-movie-image" variant="top" src={movie.ImagePath} />
                       </div>
@@ -192,7 +190,6 @@ getUser(token) {
                         </div>
                       </Card.Body>
                     </Card>
-                   
                     );
                   }
                 })}
