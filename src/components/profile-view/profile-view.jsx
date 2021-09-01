@@ -174,7 +174,7 @@ getUser(token) {
                     return (
                       <CardDeck className="movie-card-deck">
                         <Card className="favorite-movie-card" style={{ width: '16rem' }} key={movie._id}>
-                          <Card.Img style={{ width: '18rem' }} className="movieCard" variant="top" src={movie.ImagePath} />
+                          <Card.Img className="movieCard" variant="top" src={movie.ImagePath} />
                           <Card.Body>
                             <Card.Title className="movie-card-title">{movie.Title}</Card.Title>
                             <div className="fav-movie-btns">
