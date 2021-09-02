@@ -20,6 +20,11 @@
     height: auto!important;
 }
 
+.movie-view-bottom-btns {
+    display: flex;
+    justify-content: space-around;
+}
+
 @media screen and (min-width: 769px) {
     .info-btn {
         width: 65%;

@@ -4,11 +4,21 @@
     background-color: rgb(247, 247, 247);
 }
 
-.cardClass {
-  
-    max-width: 100%;
-    height: 400px;
+#cardClass {
+    min-height: 500px;
 }
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.top-flex {
+    display: flex;
+    flex-direction: column;
+}
+
 
 .card-image{
     width:  100px;
@@ -28,7 +38,8 @@
 .card-description {
     font-size: 13px;
     
-    overflow: hidden;
+    text-overflow: ellipsis;
+    
 }
 
 .card-body {
@@ -52,7 +63,6 @@
     background-color: goldenrod;
     border-color: black;
 }
-
 
 a {
     text-decoration: none!important;
