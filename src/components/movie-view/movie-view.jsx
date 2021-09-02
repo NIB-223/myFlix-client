@@ -41,7 +41,7 @@ export class MovieView extends React.Component {
     <Link to={`/genres/${movie.Genre.Name}`}>
       <Button  className="info-btn"  variant="link">Genre Info</Button>
     </Link>
-
+ <Button className="movieCard-btn" variant="primary" value={movie._id} onClick={(e) => this.addFavoriteMovie(movie)}>Add Favorite</Button>
     <div style={{textAlign: "center"}}>
       <Button className="back-btn" onClick={() => onBackClick(null)} variant="primary">Back</Button>
     </div>

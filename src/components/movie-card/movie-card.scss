@@ -11,7 +11,7 @@
 }
 
 .card-image{
-    width:  75px;
+    width:  100px;
     height: 150px;
     object-fit: cover;
 }
@@ -33,18 +33,6 @@
 .card-body {
     font-weight: 400;
 }
-
-// .card-header .fa {
-//     transition: .3s transform ease-in-out;
-//   }
-//   .card-header .collapsed .fa {
-//     transform: rotate(90deg);
-//   }.card-header .fa {
-//     transition: .3s transform ease-in-out;
-//   }
-//   .card-header .collapsed .fa {
-//     transform: rotate(90deg);
-//   }
 
   .accordion-button:not(.collapsed) {
     color: black;
@@ -84,49 +72,5 @@ a {
 
 
  
-// @media screen and (max-width: 1399px) and (min-width: 1201px) {
-//     .card-image{
-//         max-height: 425px!important;
-//         min-height: 425px!important;
-//     }
-//     .h5, h5 {
-//         font-size: 1rem!important;
-//     }
-// }
-
-// @media screen and (max-width: 1200px) and (min-width: 993px) {
-//     .card-image {
-//         max-height: 325px!important;
-//         min-height: 325px!important;
-//     }
-//     .h5, h5 {
-//         font-size: 1rem!important;
-//     }
-// }
-
-// @media screen and (max-width: 992px) and (min-width: 768px) {
- 
-//     .card-image {
-//         max-height: 225px!important;
-//         min-height: 225px!important;
-//     }
-// }
-
-// @media screen and (min-width: 768px) {
-//     .card-btns {
-//         display: flex;
-//         flex-direction: column;
-//     }
-   
-// }
-
-// @media screen and (max-width: 768px) {
-
-//     .card-image{
-//         width: 100%;
-//         max-height: none;
-//         min-height: auto;
-//     }
-// }
 
 
