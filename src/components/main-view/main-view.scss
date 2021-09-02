@@ -14,7 +14,7 @@ body {
     margin-bottom: 1rem;
 }
 
-@media screen and (min-width:769px) and (max-width: 991px) {
+@media screen and (min-width:768px) and (max-width: 991px) {
     .h5, h5 {
         font-size: 1rem;
     }
@@ -23,5 +23,17 @@ body {
         flex-direction: column;
         gap: 10px;
     }
+
+    .col-md-3 {
+        flex: 0 0 auto;
+        width: 33%;
+    }
   
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .col-md-3 {
+        flex: 0 0 auto;
+        width: 40%;
+    }
 }

@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 
 
-import { setUser, setMovies } from '../../actions/actions';
+import { setMovies } from '../../actions/actions';
 import MoviesList from '../movies-list/movies-list';
 import { LoginView } from '../login-view/login-view';
 import { RegistrationView } from '../registration-view/registration-view';
@@ -83,7 +83,6 @@ onLoggedOut() {
 render() {
   let { movies } = this.props;
   let { user } = this.state;
-
 
   return (
     <>
@@ -172,10 +171,7 @@ render() {
 }
 }
 let mapStateToProps = state => {
-  return { 
-    movies: state.movies,
-    user: state.user
-  }
+  return { movies: state.movies }
 }
 
-export default connect(mapStateToProps, { setUser, setMovies } )(MainView);
+export default connect(mapStateToProps, { setMovies } )(MainView);
