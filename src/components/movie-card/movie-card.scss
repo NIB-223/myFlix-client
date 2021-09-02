@@ -35,24 +35,12 @@
     font-weight: 400;
 }
 
-  .accordion-button:not(.collapsed) {
-    color: black;
-    background-color: goldenrod;
-    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
-  }
-
-  .accordion-button:not(.collapsed)::after {
-    background-image: url(../../../img/downArrow.svg);
-  }
-
-  .accordion-button:focus {
-    border-color: goldenrod;
-    box-shadow: 0 0 0 0.25rem rgb(218 165 32 / 25%);
-  }
-
+.movieCard-btn {
+    width: 100%;
+    margin-top: 1rem;
+}
 .btn .btn-primary {
     text-align: center!important;
-
 }
 .btn-primary {
     color: black;
@@ -63,7 +51,6 @@
     color: black;
     background-color: goldenrod;
     border-color: black;
-  
 }
 
 
