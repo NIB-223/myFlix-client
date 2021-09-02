@@ -35,7 +35,10 @@ export class MovieCard extends React.Component {
     
     return (
       <Card className="cardClass">
-        <Card.Img  className="card-image" variant="top" src={movie.ImagePath} />
+        <div style={{textAlign: 'center'}}>
+           <Card.Img  className="card-image" variant="top" src={movie.ImagePath} />
+        </div>
+       
         <Card.Body>
           <div className="card-text-body">
             <Card.Title>{movie.Title}</Card.Title>
@@ -45,10 +48,6 @@ export class MovieCard extends React.Component {
               <Button className="movieCard-btn" variant="primary">View Movie</Button>
             </Link>
           </div>
-          
-           
-          {/* <Button className="movieCard-btn" variant="primary" value={movie._id} onClick={(e) => this.addFavoriteMovie(movie)}>Add Favorite</Button> */}
-        
         </Card.Body>
       </Card>
     );
