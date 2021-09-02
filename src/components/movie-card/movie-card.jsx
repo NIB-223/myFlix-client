@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Accordion from 'react-bootstrap/Accordion'
 import axios from 'axios';
+
 
 import { Link } from "react-router-dom";
 
@@ -38,7 +40,15 @@ export class MovieCard extends React.Component {
         <Card.Body>
           <Card.Title>{movie.Title}</Card.Title>
           <Card.Text>{movie.Genre.Name}</Card.Text>
-          <Card.Text>{movie.Description}</Card.Text>
+          <Card.Text> <Accordion>
+  <Accordion.Item eventKey="0">
+    <Accordion.Header>Summary</Accordion.Header>
+    <Accordion.Body>
+      {movie.Description}
+    </Accordion.Body>
+  </Accordion.Item>
+  </Accordion> </Card.Text>
+         
           <div className="card-btns">
             <Link to={`/movies/${movie._id}`}>
               <Button className="movieCard-btn" variant="primary">View Movie</Button>

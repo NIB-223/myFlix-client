@@ -10,6 +10,28 @@
     font-weight: 400;
 }
 
+.card-header .fa {
+    transition: .3s transform ease-in-out;
+  }
+  .card-header .collapsed .fa {
+    transform: rotate(90deg);
+  }.card-header .fa {
+    transition: .3s transform ease-in-out;
+  }
+  .card-header .collapsed .fa {
+    transform: rotate(90deg);
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: black;
+    background-color: goldenrod;
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+  }
+
+  .accordion-button:not(.collapsed)::after {
+    background-image: url(../../../img/downArrow.svg);
+  }
+
 .btn .btn-primary {
     text-align: center!important;
 
