@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
 
-import logo from '../../../img/logo.jpg';
+import logoCopy from '../../../img/logoCopy.jpg';
 
 import './registration-view.scss'
 
@@ -72,7 +72,10 @@ const formValidation = () => {
 
 return (
 <>
-<h1 className="register-title">Register</h1>
+<div style={{textAlign: 'center'}} >
+    <img className="myFlix-logo" src={logoCopy} alt="myFlix Logo" />
+</div>
+  <h1 className="register-title">Register</h1>
 <Form>
 <Form.Group className="mb-3 pt-5" controlId="formUsername">
   <Form.Label>Username:</Form.Label>

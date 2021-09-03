@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 
-import logo from '../../../img/logo.jpg';
+import logoCopy from '../../../img/logoCopy.jpg';
 import './login-view.scss'
 
 
@@ -33,8 +33,10 @@ export function LoginView(props) {
 
   return (
     <>
-    
-    <h1 className="login-title" >Login</h1>
+    <div style={{textAlign: 'center'}} >
+        <img className="myFlix-logo" src={logoCopy} alt="myFlix Logo" />
+    </div>
+        <h1 className="login-title" >Login</h1>
     <Form>
     <Form.Group className="mb-3 pt-5"  controlId="formUsername">
       <Form.Label>Username:</Form.Label>
@@ -50,7 +52,7 @@ export function LoginView(props) {
     <Button className="login-button" variant="primary" type="submit" onClick={handleSubmit}>
       Login
     </Button>
-          <p className="register">Don't have an account?  <a  href="/register">Register Now</a></p>
+          <p className="register">Don't have an account?  <a href="/register">Register Now</a></p>
     </div>
 
   </Form>

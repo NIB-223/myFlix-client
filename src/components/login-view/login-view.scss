@@ -1,8 +1,9 @@
+
 .login-title {
     text-align: center;
-    margin-top: 2rem;
+
     font-weight: 900;
-    font-size: 3rem;
+    font-size: 2.25rem;
 }
 .form-label {
     font-size: 1.35rem;
@@ -18,7 +19,14 @@
 }
 
 .register {
-  
     text-align: center;
     font-size: 1rem;
+}
+
+.pt-5 {
+    padding-top: 0rem!important;
+}
+
+.form-label {
+    margin-top: .5rem!important;
 }

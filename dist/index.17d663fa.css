@@ -99,9 +99,8 @@ a {
 }
 .login-title {
   text-align: center;
-  margin-top: 2rem;
   font-weight: 900;
-  font-size: 3rem;
+  font-size: 2.25rem;
 }
 
 .form-label {
@@ -122,11 +121,18 @@ a {
   text-align: center;
   font-size: 1rem;
 }
+
+.pt-5 {
+  padding-top: 0rem !important;
+}
+
+.form-label {
+  margin-top: 0.5rem !important;
+}
 .register-title {
   text-align: center;
-  margin-top: 2rem;
   font-weight: 900;
-  font-size: 3rem;
+  font-size: 2.25rem;
 }
 
 .register-btn {
@@ -146,6 +152,10 @@ a {
 
 .mb-3 {
   margin-bottom: 1rem !important;
+}
+
+.pt-5 {
+  padding-top: 0rem !important;
 }
 .btn-container {
   display: flex;
@@ -246,6 +256,10 @@ a {
 
 .row {
   justify-content: center;
+}
+
+.form-label {
+  margin-top: 0.5rem !important;
 }
 
 .form-validation-error {
