@@ -1,0 +1,260 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900 !important;
+}
+
+.background {
+  background-image: linear-gradient(rgba(80, 80, 80, 0.5), rgba(75, 75, 75, 0.5), rgba(75, 75, 75, 0.5)), url("background.1e55751d.jpg");
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .h5, h5 {
+    font-size: 1rem;
+  }
+
+  .card-btns {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .col-md-3 {
+    flex: 0 0 auto;
+    width: 33%;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .col-md-3 {
+    flex: 0 0 auto;
+    width: 40%;
+  }
+}
+.card {
+  margin-bottom: 4rem;
+  background-color: #f7f7f7;
+  height: 100%;
+}
+
+.cardClass {
+  max-width: 100%;
+  height: 400px;
+}
+
+.card-image {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  text-align: center;
+}
+
+.card-title {
+  font-weight: 900;
+  flex-grow: 1;
+}
+
+.card-text-body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 226px;
+}
+
+.card-description {
+  font-size: 13px;
+  overflow: hidden;
+  height: 100px;
+}
+
+.card-body {
+  font-weight: 400;
+}
+
+.movieCard-btn {
+  width: 100%;
+}
+
+.btn .btn-primary {
+  text-align: center !important;
+}
+
+.btn-primary {
+  color: black;
+  background-color: goldenrod;
+  border-color: black;
+}
+
+.btn-primary:hover {
+  color: black;
+  background-color: goldenrod;
+  border-color: black;
+}
+
+a {
+  text-decoration: none !important;
+}
+.login-title {
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+.form-label {
+  font-size: 1.35rem;
+}
+
+.login-button {
+  width: 70%;
+  padding: 8px;
+  margin-top: 2rem;
+  margin-bottom: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.register {
+  text-align: center;
+  font-size: 1rem;
+}
+.register-title {
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+.register-btn {
+  width: 70%;
+  padding: 8px;
+  margin-top: 0.75rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.form-validation-error {
+  color: red !important;
+  font-size: 0.85rem;
+}
+
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.btn-link {
+  text-decoration: none;
+}
+
+.back-btn {
+  width: 35%;
+  margin-top: 3.75rem;
+}
+
+.card {
+  height: inherit;
+}
+
+#movie-viewIMG {
+  max-width: 60% !important;
+  height: auto !important;
+}
+
+.movie-view-bottom-btns {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media screen and (min-width: 769px) {
+  .info-btn {
+    width: 65%;
+    margin-top: 1.5rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .info-btn {
+    width: 75%;
+    margin-top: 1rem;
+  }
+}
+
+
+.favorite-movies-title {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.favorites-movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.Fav-movie-card {
+  width: 16rem;
+}
+
+#fav-movie-image {
+  height: 350px;
+}
+
+.fav-movie-btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+}
+
+.remove-btn {
+  margin-top: 1rem;
+  padding: 6px 12px;
+}
+
+.btn {
+  background-color: goldenrod;
+  color: black;
+  border-color: black;
+}
+
+.btn-danger:hover {
+  background-color: goldenrod;
+  color: black;
+  border-color: black;
+}
+
+.form-label {
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+}
+
+.update-btn {
+  margin-top: 1.5rem;
+  padding: 6px 42px;
+}
+
+.row {
+  justify-content: center;
+}
+
+.form-validation-error {
+  color: red;
+}
+.navbar {
+  margin-bottom: 1rem;
+}
+.my-flix {
+  color: steelblue;
+}
+/*# sourceMappingURL=index.17d663fa.css.map */
