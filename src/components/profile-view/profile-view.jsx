@@ -199,6 +199,7 @@ getUser(token) {
 
           <h1 className="section">Change Account Information</h1>
           <Card.Body>
+            <div className="form-flex">
             <Form noValidate validated={validated} className="update-form" onSubmit={(e) => this.handleUpdate(e, this.Name, this.Username, this.Password, this.Email, this.Birthdate)}>
 
               <Form.Group controlId="formName">
@@ -232,15 +233,13 @@ getUser(token) {
                     Update
                   </Button>
                 </div>
-               
-     
-              <Card.Body style={{textAlign: "right", marginTop: '4rem'}}>
+            </Form>
+           </div>
+           <Card.Body style={{textAlign: "right", marginTop: '4rem'}}>
                 <Button className="delete-btn" variant='danger' onClick={(e) => this.handleDeleteUser(e)}>
                   Delete Account
                 </Button>
               </Card.Body>
-            </Form>
-
           </Card.Body>
         </Card>
       </Row >

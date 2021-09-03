@@ -28,6 +28,12 @@ body {
   }
 }
 
+@media screen and (min-width: 768px) {
+  form {
+    width: 50%;
+  }
+}
+
 @media screen and (min-width: 576px) and (max-width: 768px) {
   .col-md-3 {
     flex: 0 0 auto;
@@ -242,6 +248,16 @@ a {
   background-color: goldenrod;
   color: black;
   border-color: black;
+}
+
+.section {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.form-flex {
+  display: flex;
+  justify-content: center;
 }
 
 .form-label {

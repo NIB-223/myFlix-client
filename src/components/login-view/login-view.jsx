@@ -37,6 +37,7 @@ export function LoginView(props) {
         <img className="myFlix-logo" src={logoCopy} alt="myFlix Logo" />
     </div>
         <h1 className="login-title" >Login</h1>
+    <div className="form-flex">
     <Form>
     <Form.Group className="mb-3 pt-5"  controlId="formUsername">
       <Form.Label>Username:</Form.Label>
@@ -54,8 +55,8 @@ export function LoginView(props) {
     </Button>
           <p className="register">Don't have an account?  <a href="/register">Register Now</a></p>
     </div>
-
   </Form>
+  </div>
   </>
   );
 }

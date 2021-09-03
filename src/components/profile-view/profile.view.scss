@@ -3,6 +3,8 @@
     margin-bottom: 2rem;
 }
 
+
+
 .favorites-movies {
     display: flex;
     flex-wrap: wrap;
@@ -14,10 +16,7 @@
 }
 
 #fav-movie-image {
-    // max-height: none;
-    // min-height: auto;
     height: 350px;
-
 }
 
 .fav-movie-btns {
@@ -41,6 +40,14 @@
     color: black;
     border-color: black;
 }
+.section {
+    text-align: center;
+    margin-top: 2rem;
+}
+.form-flex {
+    display: flex;
+    justify-content: center;;
+}
 
 .form-label {
     margin-top: 1rem;
@@ -63,3 +70,4 @@
 .form-validation-error {
     color: red;
 }
+
