@@ -104,7 +104,7 @@ render() {
           //   </Col>
           // ))
         }} />
-        <Route path="/users" render={() => {
+        <Route path="/register" render={() => {
            if (user) return <Redirect to="/" />
             return <Col>
           <RegistrationView />
