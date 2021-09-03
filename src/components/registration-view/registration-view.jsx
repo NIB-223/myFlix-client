@@ -39,6 +39,7 @@ const handleSubmit = (e) => {
 
   })
   .catch(e => {
+    alert('Unable to register, please review credentials and try again.');
     console.log('error registering the user')
   });
 }
