@@ -179,7 +179,7 @@ getUser(token) {
                       <Card.Img  id="fav-movie-image" variant="top" src={movie.ImagePath} />
                       </div>
                       <Card.Body>
-                        <Card.Title>{movie.Title}</Card.Title>
+                        <Card.Title style={{fontSize: '1rem'}}>{movie.Title}</Card.Title>
                         <div className="fav-movie-btns">
                           <Link to={`/movies/${movie._id}`}>
                             <Button className="movieCard-btn" variant="primary">View Movie</Button>
