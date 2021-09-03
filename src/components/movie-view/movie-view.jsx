@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import axios from 'axios';
+
 
 import { Link } from "react-router-dom";
 
@@ -9,6 +11,24 @@ import './movie-view.scss'
 
 
 export class MovieView extends React.Component {
+  
+  addFavoriteMovie(movie) {
+    const token = localStorage.getItem('token');
+    const username = localStorage.getItem('user');
+
+    axios
+      .post(`https://myflixdb20.herokuapp.com/users/${username}/FavoriteMovies/${movie._id}`, 
+      {},
+      {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      .then(() => {
+        alert('Movie added to lists');
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
 
   keypressCallback(event) {
     console.log(event.key);
@@ -43,8 +63,8 @@ export class MovieView extends React.Component {
     </Link>
  
     <div class="movie-view-bottom-btns">
+    <Button className="back-btn" onClick={() => onBackClick(null)} variant="primary">Back</Button>
     <Button className="back-btn"value={movie._id} onClick={(e) => this.addFavoriteMovie(movie)}>Add to Favorites</Button>
-      <Button className="back-btn" onClick={() => onBackClick(null)} variant="primary">Back</Button>
     </div>
       
 </div>
