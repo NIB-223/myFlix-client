@@ -30,20 +30,17 @@ URL in browser:<br>
 http://localhost:1234/
 ```
 
-__Tools Used__
-- React 
-- React-Bootstrap 
-- Redux
 
-__Dependencies__ 
+__Tools/Dependencies__ 
+ - React 
+ - React-Bootstrap 
+ - Redux
  - axios
  - prop-types
- - react 
  - react-bootstrap
  - react-dom
  - react-redux
  - react-router-dom
- - redux
  - redux-devtools-extension
 
  __devDependencies__
