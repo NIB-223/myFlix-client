@@ -3,11 +3,7 @@ This is a the front end of a RESTful API (myFlix) I built that contains a list o
 
 Backend Code:https://github.com/Drxl95/movie_api
 
-<video id="video" width="500px" height="700px" controls autoplay>
-                <source src="media/myFlix-Iphone-LiveDemo.mp4" type="video/mp4">
-                <source src="media/myFlix-Iphone-LiveDemo.ogg" type="video/ogg">
-                    Your browser does not support the video tag.
-                </video>
+<img src="img/myFlix-doc.gif">
 
 # Getting Started
 
