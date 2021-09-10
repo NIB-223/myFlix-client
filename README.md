@@ -3,7 +3,7 @@ This is a the front end of a RESTful API (myFlix) I built that contains a list o
 
 Backend Code:https://github.com/Drxl95/movie_api
 
-<img src="img/myFlix-doc.gif">
+<img width="700px" src="img/myFlix-doc.gif">
 
 # Getting Started
 
